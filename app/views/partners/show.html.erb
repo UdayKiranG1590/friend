@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Frist name:</strong>
+  <%= @partner.frist_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @partner.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @partner.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @partner.phone %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @partner.twitter %>
+</p>
+
+<%= link_to 'Edit', edit_partner_path(@partner) %> |
+<%= link_to 'Back', partners_path %>
