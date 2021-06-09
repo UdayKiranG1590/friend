@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :partners
+  resources :customers
   resources :friends
   #get 'home/index'
   root 'home#index'

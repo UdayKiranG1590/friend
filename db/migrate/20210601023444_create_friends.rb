@@ -9,5 +9,14 @@ class CreateFriends < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    create_table :partners do |t|
+      t.belongs_to :friends
+      t.timestamps
+    end
+    create_table :customers do |t|
+      t.belongs_to :friends
+      t.string :email
+      t.timestamps
+    end
   end
 end

@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_01_030948) do
+ActiveRecord::Schema.define(version: 2021_06_04_075847) do
+
+  create_table "customers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "friends", force: :cascade do |t|
     t.string "frist_name"
@@ -23,5 +29,16 @@ ActiveRecord::Schema.define(version: 2021_06_01_030948) do
     t.integer "user_id"
     t.index ["user_id"], name: "index_friends_on_user_id"
   end
+
+  create_table "partners", force: :cascade do |t|
+    t.string "frist_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.string "twitter"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+  add_foreign_key "friends", "partners", "customers"
 
 end
